@@ -1,7 +1,7 @@
 resource "google_storage_bucket" "website" {
-  force_destroy = true
-  location      = var.region
-  name          = var.bucket_name
+  force_destroy               = true
+  location                    = var.region
+  name                        = var.bucket_name
   uniform_bucket_level_access = true
 
   website {
@@ -16,8 +16,8 @@ resource "google_storage_bucket_iam_member" "all_users" {
 }
 
 resource "google_storage_bucket_object" "index" {
-  bucket = google_storage_bucket.website.name
+  bucket       = google_storage_bucket.website.name
   content_type = "text/html"
-  name   = "index.html"
-  source = "index.html"
+  name         = "index.html"
+  source       = "index.html"
 }
