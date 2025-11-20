@@ -1,2 +1,2 @@
-bucket_name = "ms-static-site"
+bucket_name = "static.excloo.dev"
 project_id  = "static-site-478800"
